@@ -3,7 +3,9 @@ import Header from './component/Header';
 import User from './component/User';
 import List from './component/List';
 import Photo from './assets/profile.png';
+import { Link, Route } from 'react-router-dom';
 import { useState } from 'react';
+import routes from './routes';
 
 function App() {
 
@@ -28,6 +30,19 @@ function App() {
 
   return (
     <>
+      <Link to="/"> Home </Link>
+      <Link to="/user"> User </Link>
+      <div>
+        {routes.map = ((value, key) => {
+          return (
+          <Route 
+            key={key} 
+            path={value.path} 
+            component={value.component} 
+            exact={value.exact}/>
+          )
+        })}
+      </div>
       <form> 
         <input type="text" value={person.name} onChange={event => changeInputName(event)}/>
         <input type="text" name="name" value={person.email} onChange={event => changeInputEmail(event)}/>

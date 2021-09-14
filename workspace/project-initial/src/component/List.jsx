@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const List = () => {
     let list = [
       { name: "Victor",
         email: "victorluizcefet@gmail.com"
@@ -37,4 +37,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default List;
