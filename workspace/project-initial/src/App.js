@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './component/Header';
 import User from './component/User';
+import List from './component/List';
 import Photo from './assets/profile.png';
 import { useState } from 'react';
 
@@ -28,9 +28,6 @@ function App() {
 
   return (
     <>
-    <div className="App">
-      <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
       <form> 
         <input type="text" value={person.name} onChange={event => changeInputName(event)}/>
         <input type="text" name="name" value={person.email} onChange={event => changeInputEmail(event)}/>
@@ -45,8 +42,7 @@ function App() {
         picture={Photo}
       /> 
       <Header/>
-      </header>
-    </div>
+      <List />
     </>
   );
 }
