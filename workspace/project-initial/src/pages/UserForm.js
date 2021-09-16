@@ -7,10 +7,13 @@ const UserFormFunc = props => {
 
     const { handleSubmit } = props;
 
+    // Metódo resposável por fazer o submit no form, passando uma função que é o submitUserAction
+    // E nesse metódo passamos o data, que é para ser salvo no back.
     const submit = (data, submitUserAction) => {
         submitUserAction(data);
     }
 
+    // Nesse forms no handleSubmit e passamos os fields e a função para salvar os valores
     return (
         <form onSubmit={handleSubmit((fields) => submit(fields, submitUserAction))}>
             <label>
